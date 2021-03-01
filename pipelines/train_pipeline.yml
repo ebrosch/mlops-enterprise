@@ -11,7 +11,7 @@ pipeline:
       parameters:
         NUM_ITERATIONS_2:
           source: PipelineParam1
-        NUM_ITERATIONS_1: 7
+        NUM_ITERATIONS_1: 1
       type: "PythonScriptStep"
       name: "TrainingStep"
       script_name: "train.py"
