@@ -32,6 +32,11 @@ jobs:
       uses: Azure/aml-run@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          
+    - name: Dump training output
+      env:
+        TRAINING_OUTPUT: ${{ toJson(steps) }}
+      run: echo "$TRAINING_OUTPUT"
 
     # AML Register Model Action
     - uses: Azure/aml-registermodel@v1
